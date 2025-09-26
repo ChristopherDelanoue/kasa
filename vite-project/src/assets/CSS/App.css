@@ -1,0 +1,13 @@
+.App {
+  background-color: blue;
+}
+.App h1 {
+  color: white;
+}
+@media (min-width: 400px) {
+  .App h1 {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
