@@ -1,13 +1,21 @@
 import { useState } from 'react';
 import './assets/CSS/App.css';
+import { createBrowserRouter } from 'react-router';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Banner from './Components/Banner.jsx';
+import Main from './components/Main';
 
 function App() {
-   const [count, setCount] = useState(0);
+   //const router = createBrowserRouter();
 
    return (
-      <div className="App">
-         <h1>Hello World!</h1>
-      </div>
+      <>
+         <Header />
+         <Banner />
+         <Main />
+         <Footer />
+      </>
    );
 }
 

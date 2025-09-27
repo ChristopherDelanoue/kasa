@@ -1,13 +1,102 @@
-.App {
-  background-color: blue;
+* {
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
 }
-.App h1 {
-  color: white;
+
+.nav-bar {
+  margin: auto;
+  height: 68px;
+  width: 1240px;
+  padding: 0px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0px 30px 0px;
 }
-@media (min-width: 400px) {
-  .App h1 {
-    color: red;
+.nav-bar ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+.nav-bar ul li {
+  cursor: pointer;
+  padding: 0px 40px;
+}
+.nav-bar ul li :active {
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .nav-bar {
+    font-family: sans-serif;
+    color: orange;
   }
+}
+
+footer {
+  width: 1240px;
+  height: 210px;
+  background-color: #000;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+footer img {
+  background-color: black;
+  width: 122px;
+  height: 40px;
+}
+footer p {
+  background-color: black;
+  font-size: 24px;
+  color: #fff;
+}
+
+.banner {
+  width: 1240px;
+  margin: auto;
+  height: 225px;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  padding: 30px 0px;
+}
+.banner img {
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  filter: brightness(0.5);
+}
+.banner p {
+  color: white;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+}
+
+.main {
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  height: 800px;
+  width: 1240px;
+  margin: auto;
+  margin: 0px auto 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
 }
 
 /*# sourceMappingURL=App.css.map */
