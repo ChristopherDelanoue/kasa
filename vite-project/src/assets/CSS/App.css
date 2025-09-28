@@ -5,7 +5,7 @@
 
 .nav-bar {
   margin: auto;
-  height: 3vh;
+  height: 7vh;
   width: 1240px;
   padding: 0px;
   color: #000;
@@ -13,6 +13,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 0px 30px 0px;
+}
+.nav-bar img {
+  height: 68px;
+  justify-content: center;
 }
 .nav-bar ul {
   align-items: center;
@@ -67,7 +71,7 @@ footer p {
   align-items: center;
   position: relative;
   display: flex;
-  padding: 30px 0px;
+  padding-bottom: 30px;
 }
 .banner img {
   height: 100%;
@@ -90,14 +94,14 @@ footer p {
   width: 1240px;
   margin: auto;
   display: grid;
-  height: calc(70vh - 230px);
-  grid-template-rows: repeat(auto-fill, 340px);
-  grid-template-columns: 340px 340px 340px;
+  height: calc(68vh - 180px);
+  grid-auto-rows: 280px;
+  grid-template-columns: 280px 280px 280px;
   gap: 50px;
   background-color: #f6f6f6;
   border-radius: 25px;
   justify-content: center;
-  padding: 50px 0px;
+  padding: 30px 0px;
   overflow: scroll;
 }
 .container-logement .logement {
@@ -108,6 +112,30 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.not-found {
+  width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  height: calc(81vh - 70px);
+}
+.not-found h2 {
+  color: #FF6060;
+  font-weight: 700;
+  font-size: 288px;
+}
+.not-found p {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+}
+.not-found a {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 * {
