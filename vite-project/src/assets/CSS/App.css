@@ -5,14 +5,14 @@
 
 .nav-bar {
   margin: auto;
-  height: 68px;
+  height: 3vh;
   width: 1240px;
   padding: 0px;
   color: #000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 0px 30px 0px;
+  padding: 20px 0px 30px 0px;
 }
 .nav-bar ul {
   align-items: center;
@@ -38,15 +38,15 @@
 }
 
 footer {
-  width: 1240px;
-  height: 210px;
+  width: 100%;
+  height: 12vh;
   background-color: #000;
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   bottom: 0;
+  margin: 20px auto;
 }
 footer img {
   background-color: black;
@@ -62,7 +62,7 @@ footer p {
 .banner {
   width: 1240px;
   margin: auto;
-  height: 225px;
+  height: 15vh;
   align-content: center;
   align-items: center;
   position: relative;
@@ -70,7 +70,7 @@ footer p {
   padding: 30px 0px;
 }
 .banner img {
-  height: 225px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
@@ -86,17 +86,36 @@ footer p {
   text-align: center;
 }
 
-.main {
-  background-color: #F6F6F6;
-  border-radius: 25px;
-  height: 800px;
+.container-logement {
   width: 1240px;
   margin: auto;
-  margin: 0px auto 30px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 30px;
+  height: calc(70vh - 230px);
+  grid-template-rows: repeat(auto-fill, 340px);
+  grid-template-columns: 340px 340px 340px;
+  gap: 50px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  justify-content: center;
+  padding: 50px 0px;
+  overflow: scroll;
+}
+.container-logement .logement {
+  border-radius: 25px;
+  overflow: clip;
+}
+.container-logement img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -14,19 +14,19 @@ function Article() {
    }, []);
 
    return (
-      <article className="article">
+      <div className="container-logement">
          {articles.map((article) => (
-            <div
+            <article
                key={article.id}
-               className="article"
+               className="logement"
             >
                <img
                   src={article.cover}
                   alt="cover {article.title}"
                />
-            </div>
+            </article>
          ))}
-      </article>
+      </div>
    );
 }
 
