@@ -90,7 +90,27 @@ footer p {
   text-align: center;
 }
 
-.container-logement {
+.container-shadow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 1240px;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.container-shadow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background: linear-gradient(to top, rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0));
+  z-index: 10;
+}
+.container-shadow .container-logement {
   width: 1240px;
   margin: auto;
   display: grid;
@@ -103,15 +123,43 @@ footer p {
   justify-content: center;
   padding: 30px 0px;
   overflow: scroll;
+  position: relative;
 }
-.container-logement .logement {
+.container-shadow .container-logement .logement {
   border-radius: 25px;
   overflow: clip;
+  position: relative;
 }
-.container-logement img {
+.container-shadow .container-logement .logement::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+.container-shadow .container-logement .logement img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+}
+.container-shadow .container-logement .logement p {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 2;
+  color: white;
+  width: calc(100% - 20px);
+  height: 10%;
+  bottom: 0px;
+  left: 0px;
+  justify-items: center;
+  padding: 0px 10px 30px 10px;
+  overflow-wrap: anywhere;
+  background-color: transparent;
 }
 
 .not-found {

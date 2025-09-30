@@ -14,18 +14,21 @@ function Article() {
    }, []);
 
    return (
-      <div className="container-logement">
-         {articles.map((article) => (
-            <article
-               key={article.id}
-               className="logement"
-            >
-               <img
-                  src={article.cover}
-                  alt="cover {article.title}"
-               />
-            </article>
-         ))}
+      <div className="container-shadow">
+         <div className="container-logement">
+            {articles.map((article) => (
+               <article
+                  key={article.id}
+                  className="logement"
+               >
+                  <img
+                     src={article.cover}
+                     alt="cover {article.title}"
+                  />
+                  <p>{article.title}</p>
+               </article>
+            ))}
+         </div>
       </div>
    );
 }
