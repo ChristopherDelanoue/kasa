@@ -1,0 +1,43 @@
+.container
+  height: calc(66vh - 100px)
+  display: flex
+  flex-direction: column
+.dropdown-container
+  width: 1024px
+  margin: 20px auto
+  border-radius: 8px
+  overflow: hidden
+  p
+    background-color: transparent
+
+.header
+  background-color: #ff6060
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 20px
+  color: white
+  cursor: pointer
+  h2
+    background-color: transparent
+
+.arrow
+  background-color: transparent
+  width: 30px
+  height: 20px
+  transition: transform 0.3s ease
+
+.rotate
+  transform: rotate(180deg)
+
+.content
+  max-height: 0
+  overflow: hidden
+  background-color: #f6f6f6
+  transition: all 0.5s ease
+  padding: 0 20px
+
+.content.open
+  max-height: 300px
+  padding: 20px
+

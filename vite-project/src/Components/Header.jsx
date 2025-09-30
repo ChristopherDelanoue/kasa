@@ -1,3 +1,5 @@
+import { NavLink, Outlet } from 'react-router';
+
 function Header() {
    return (
       <nav>
@@ -9,8 +11,12 @@ function Header() {
             />
 
             <ul className="nav-link">
-               <li>Accueil</li>
-               <li>A Propos</li>
+               <li>
+                  <NavLink to="/">Accueil</NavLink>
+               </li>
+               <li>
+                  <NavLink to="/A_propos">A Propos</NavLink>
+               </li>
             </ul>
          </div>
       </nav>
