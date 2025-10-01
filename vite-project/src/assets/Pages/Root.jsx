@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router';
-import Home from './Home.jsx';
 import Header from '../../Components/Header.jsx';
 import Footer from '../../Components/Footer.jsx';
 

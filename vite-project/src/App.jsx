@@ -4,6 +4,7 @@ import Home from './assets/Pages/Home.jsx';
 import Error from './assets/Pages/Error';
 import A_Propos from './assets/Pages/A_Propos.jsx';
 import Root from './assets/Pages/Root';
+import Article from './Components/Article.jsx';
 
 function App() {
    const router = createBrowserRouter([

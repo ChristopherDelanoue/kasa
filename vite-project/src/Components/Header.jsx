@@ -4,11 +4,13 @@ function Header() {
    return (
       <nav>
          <div className="nav-bar">
-            <img
-               className="logo"
-               src="../../src/assets/Logo/LOGO.png"
-               alt="logo"
-            />
+            <NavLink to="/">
+               <img
+                  className="logo"
+                  src="../../src/assets/Logo/LOGO.png"
+                  alt="logo"
+               />
+            </NavLink>
 
             <ul className="nav-link">
                <li>
