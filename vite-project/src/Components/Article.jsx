@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
 function Article() {
    const [articles, setArticles] = useState([]);
@@ -17,16 +18,22 @@ function Article() {
       <div className="container-shadow">
          <div className="container-logement">
             {articles.map((article) => (
-               <article
+               <Link
+                  to={`/Article/${article.id}`}
                   key={article.id}
-                  className="logement"
+                  className="link-article"
                >
-                  <img
-                     src={article.cover}
-                     alt="cover {article.title}"
-                  />
-                  <p>{article.title}</p>
-               </article>
+                  <article
+                     key={article.id}
+                     className="logement"
+                  >
+                     <img
+                        src={article.cover}
+                        alt="cover {article.title}"
+                     />
+                     <p>{article.title}</p>
+                  </article>
+               </Link>
             ))}
          </div>
       </div>
