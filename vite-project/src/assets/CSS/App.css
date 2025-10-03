@@ -31,8 +31,8 @@
   cursor: pointer;
   padding: 0px 40px;
 }
-.nav-bar ul li :active {
-  text-decoration: underline;
+.nav-bar ul li a {
+  text-decoration: none;
 }
 @media (max-width: 800px) {
   .nav-bar {
@@ -223,7 +223,7 @@ footer p {
   background-color: transparent;
   width: 30px;
   height: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .rotate {
@@ -234,7 +234,7 @@ footer p {
   max-height: 0;
   overflow: hidden;
   background-color: #f6f6f6;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
   padding: 0 20px;
 }
 
@@ -248,10 +248,79 @@ footer p {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 1px solid red;
   text-align: center;
   height: calc(81vh - 70px);
+}
+.ArticlePage-container img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  top: 0px;
+}
+.ArticlePage-container .sous-photo {
+  display: flex;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .groupe {
+  display: flex;
+  height: 77px;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 10px 0px;
+  align-items: center;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .groupe .droite {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .groupe .droite img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .groupe .droite p {
+  width: 50px;
+  color: #ff6060;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  align-content: center;
+  justify-items: right;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche h2 {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .tag {
+  display: flex;
+  flex-direction: row;
+}
+.ArticlePage-container .sous-photo .sous-photo-gauche .tag p {
+  background-color: #ff6060;
+  color: white;
+  border-radius: 25px;
+  height: 36px;
+  padding: 0px 30px;
+  align-content: center;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .loader-container {
