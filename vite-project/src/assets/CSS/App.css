@@ -248,7 +248,7 @@ footer p {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: 1px solid red;
   text-align: center;
   height: calc(81vh - 70px);
@@ -261,6 +261,7 @@ footer p {
 }
 .ArticlePage-container .sous-photo {
   display: flex;
+  top: 20px;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche {
   display: flex;
@@ -290,13 +291,14 @@ footer p {
   margin-left: 20px;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche .groupe .droite p {
+  display: flex;
+  text-align: right;
   width: 50px;
   color: #ff6060;
-  padding-right: 10px;
+  padding-right: 20px;
   font-weight: 500;
   font-size: 18px;
-  align-content: center;
-  justify-items: right;
+  align-items: center;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche h2 {
   color: #ff6060;
@@ -321,6 +323,50 @@ footer p {
   margin-right: 20px;
   font-size: 14px;
   font-weight: 700;
+}
+.ArticlePage-container .sous-photo .groupe-description {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  text-align: left;
+}
+.ArticlePage-container .sous-photo .groupe-description .DropDown {
+  display: flex;
+  width: 47%;
+  background-color: #ff6060;
+  color: white;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ArticlePage-container .sous-photo .groupe-description .DropDown p {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+}
+.ArticlePage-container .sous-photo .groupe-description .DropDown img {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
+
+.star {
+  display: flex;
+}
+.star i {
+  font-size: 36px;
+  padding-left: 10px;
+}
+
+.orange {
+  color: #ff6060;
+}
+
+.grey {
+  color: #E3E3E3;
 }
 
 .loader-container {

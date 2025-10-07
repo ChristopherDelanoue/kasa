@@ -45,9 +45,24 @@ function ArticlePage() {
                            <p key={index}>{tag}</p>
                         ))}
                      </div>
-                     <div className="star"></div>
+                     {etoiles(logement.rating)}
                   </div>
-                  <div className="groupe"></div>
+                  <div className="groupe-description">
+                     <div className="DropDown">
+                        <p>Description</p>
+                        <img
+                           src="../../src/assets/Logo/arrow-up.png"
+                           alt="arrow"
+                        />
+                     </div>
+                     <div className="DropDown">
+                        <p>Equipement</p>
+                        <img
+                           src="../../src/assets/Logo/arrow-up.png"
+                           alt="arrow"
+                        />
+                     </div>
+                  </div>
                </div>
                <div className="sous-photo-droite"></div>
             </div>
@@ -55,6 +70,20 @@ function ArticlePage() {
       );
    } else {
       return <Loader />;
+   }
+
+   function etoiles(rating) {
+      const note = parseInt(rating);
+      const star = [];
+      for (let i = 0; i < 5; i++) {
+         star.push(
+            <i
+               key={i}
+               className={`fa-solid fa-star ${i < note ? 'orange' : 'grey'}`}
+            ></i>,
+         );
+      }
+      return <div className="star">{star}</div>;
    }
 }
 
