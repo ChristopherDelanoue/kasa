@@ -7,6 +7,7 @@ function ArticlePage() {
    const { id } = useParams();
    const [logement, setLogement] = useState();
    const [isOpen, setIsOpen] = useState(false);
+   const [index, setIndex] = useState(0);
 
    useEffect(() => {
       fetch('/Data/data.json')
@@ -23,10 +24,26 @@ function ArticlePage() {
    if (logement) {
       return (
          <div className="ArticlePage-container">
-            <img
-               src={logement.cover}
-               alt="cover"
-            />
+            {console.log(logement)}
+            <div className="images_container">
+               <img
+                  src={logement.pictures[index]}
+                  alt="cover {index}"
+               />
+               <div className="overlay">
+                  <i
+                     onClick={() => changePiture('moins')}
+                     className="fa-solid fa-chevron-left"
+                  ></i>
+                  <i
+                     onClick={() => changePiture('plus')}
+                     className="fa-solid fa-chevron-right"
+                  ></i>
+                  <p>
+                     {index + 1}/{logement.pictures.length}
+                  </p>
+               </div>
+            </div>
             <div className="sous-photo">
                <div className="sous-photo-gauche">
                   <div className="groupe">
@@ -54,7 +71,7 @@ function ArticlePage() {
                      <DropDownArticle title="Équipements">
                         <ul>
                            {logement.equipments.map((equipement) => (
-                              <li key={equipement.id}>{equipement}</li>
+                              <li key={equipement}>{equipement}</li>
                            ))}
                         </ul>
                      </DropDownArticle>
@@ -80,6 +97,22 @@ function ArticlePage() {
          );
       }
       return <div className="star">{star}</div>;
+   }
+
+   function changePiture(direction) {
+      setIndex((prevIndex) => {
+         if (direction === 'moins') {
+            return prevIndex === 0
+               ? logement.pictures.length - 1
+               : prevIndex - 1;
+         } else if (direction === 'plus') {
+            return prevIndex === logement.pictures.length - 1
+               ? 0
+               : prevIndex + 1;
+         } else {
+            return prevIndex;
+         }
+      });
    }
 }
 
