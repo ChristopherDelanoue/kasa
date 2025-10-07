@@ -1,11 +1,12 @@
 import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import { Loader } from '../../Components/Loader.jsx';
-import DropDown from '../../Components/DropDown.jsx';
+import DropDownArticle from '../../Components/DropDownArticle.jsx';
 
 function ArticlePage() {
    const { id } = useParams();
    const [logement, setLogement] = useState();
+   const [isOpen, setIsOpen] = useState(false);
 
    useEffect(() => {
       fetch('/Data/data.json')
@@ -22,7 +23,6 @@ function ArticlePage() {
    if (logement) {
       return (
          <div className="ArticlePage-container">
-            {console.log(logement)}
             <img
                src={logement.cover}
                alt="cover"
@@ -48,20 +48,16 @@ function ArticlePage() {
                      {etoiles(logement.rating)}
                   </div>
                   <div className="groupe-description">
-                     <div className="DropDown">
-                        <p>Description</p>
-                        <img
-                           src="../../src/assets/Logo/arrow-up.png"
-                           alt="arrow"
-                        />
-                     </div>
-                     <div className="DropDown">
-                        <p>Equipement</p>
-                        <img
-                           src="../../src/assets/Logo/arrow-up.png"
-                           alt="arrow"
-                        />
-                     </div>
+                     <DropDownArticle title="Description">
+                        <p>{logement.description}</p>
+                     </DropDownArticle>
+                     <DropDownArticle title="Équipements">
+                        <ul>
+                           {logement.equipments.map((equipement) => (
+                              <li key={equipement.id}>{equipement}</li>
+                           ))}
+                        </ul>
+                     </DropDownArticle>
                   </div>
                </div>
                <div className="sous-photo-droite"></div>
