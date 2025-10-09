@@ -1,21 +1,31 @@
 .not-found
-  width: 1240px
+  max-width: 1240px
+  width: 90%
   margin: auto
   display: flex
   flex-direction: column
   justify-content: space-around
   text-align: center
   height: 80%
+  @media(max-width: 750px)
+    padding: 30px 0
+    height: 70%
   h2
     color: #FF6060
     font-weight: 700
     font-size: 288px
+    @media(max-width: 750px)
+      font-size: 96px
   p
     font-size: 36px
     font-weight: 500
     color: #FF6060
+    @media(max-width: 750px)
+      font-size: 18px
   a
     font-size: 18px
     font-weight: 500
+    @media(max-width: 750px)
+      font-size: 14px
 
 

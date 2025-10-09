@@ -8,6 +8,8 @@ nav
   margin: auto
   height: 10%
   position: relative
+  @media(max-width: 750px)
+    width: 90%
   .nav-bar
     margin: auto
     height: 100%
@@ -21,6 +23,9 @@ nav
     img
       height: 68px
       justify-content: center
+      @media(max-width: 750px)
+        height: 35px
+        width: 120px
     ul
       align-items: center
       list-style: none
@@ -29,13 +34,15 @@ nav
       justify-content: center
       font-weight: 500
       font-size: 24px
+      @media(max-width: 750px)
+        font-size: 12px
       li
         cursor: pointer
         padding: 0px 0px 0px 40px
+        @media(max-width: 750px)
+          padding: 0 0 0 20px
         a
           text-decoration: none
-    @media(max-width: 800px)
-      font-family: sans-serif
-      color: orange
+
 
 
