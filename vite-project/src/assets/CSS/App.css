@@ -3,22 +3,29 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.nav-bar {
+nav {
+  max-width: 1240px;
+  width: 90%;
   margin: auto;
-  height: 7vh;
-  width: 1240px;
-  padding: 0px;
+  height: 10%;
+  position: relative;
+}
+nav .nav-bar {
+  margin: auto;
+  height: 100%;
+  width: 100%;
   color: #000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0px 30px 0px;
+  padding: 10px 0px 10px 0px;
+  box-sizing: border-box;
 }
-.nav-bar img {
+nav .nav-bar img {
   height: 68px;
   justify-content: center;
 }
-.nav-bar ul {
+nav .nav-bar ul {
   align-items: center;
   list-style: none;
   display: flex;
@@ -27,15 +34,15 @@
   font-weight: 500;
   font-size: 24px;
 }
-.nav-bar ul li {
+nav .nav-bar ul li {
   cursor: pointer;
-  padding: 0px 40px;
+  padding: 0px 0px 0px 40px;
 }
-.nav-bar ul li a {
+nav .nav-bar ul li a {
   text-decoration: none;
 }
 @media (max-width: 800px) {
-  .nav-bar {
+  nav .nav-bar {
     font-family: sans-serif;
     color: orange;
   }
@@ -43,14 +50,15 @@
 
 footer {
   width: 100%;
-  height: 12vh;
+  height: 10%;
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   bottom: 0;
-  margin: 20px auto;
+  padding: 20px 0px 20px 0px;
+  box-sizing: border-box;
 }
 footer img {
   background-color: black;
@@ -64,9 +72,10 @@ footer p {
 }
 
 .banner {
-  width: 1240px;
+  max-width: 1240px;
+  width: 90%;
   margin: auto;
-  height: 15vh;
+  height: 17%;
   align-content: center;
   align-items: center;
   position: relative;
@@ -95,10 +104,12 @@ footer p {
   width: 100%;
   display: flex;
   justify-content: center;
-  width: 1240px;
+  max-width: 1240px;
+  width: 90%;
   margin: auto;
   border-radius: 25px;
   overflow: hidden;
+  height: 63%;
 }
 .container-shadow::after {
   content: "";
@@ -114,14 +125,13 @@ footer p {
   width: 1240px;
   margin: auto;
   display: grid;
-  height: calc(68vh - 190px);
-  grid-auto-rows: 280px;
-  grid-template-columns: 280px 280px 280px;
+  height: 100%;
+  grid-template-columns: repeat(3, minmax(30%, 320px));
   gap: 50px;
   background-color: #f6f6f6;
   border-radius: 25px;
   justify-content: center;
-  padding: 30px 0px;
+  padding: 30px 20px;
   overflow: scroll;
   position: relative;
 }
@@ -133,6 +143,7 @@ footer p {
   overflow: clip;
   position: relative;
   height: 100%;
+  aspect-ratio: 1/1;
 }
 .container-shadow .container-logement .link-article .logement::after {
   content: "";
@@ -152,7 +163,7 @@ footer p {
 }
 .container-shadow .container-logement .link-article .logement p {
   position: absolute;
-  font-size: 18px;
+  font-size: 0.8em;
   font-weight: 700;
   z-index: 2;
   color: white;
@@ -161,7 +172,7 @@ footer p {
   bottom: 0px;
   left: 0px;
   justify-items: center;
-  padding: 0px 10px 30px 10px;
+  padding: 0px 10px 40px 10px;
   overflow-wrap: anywhere;
   background-color: transparent;
 }
@@ -173,7 +184,7 @@ footer p {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  height: calc(81vh - 70px);
+  height: 80%;
 }
 .not-found h2 {
   color: #FF6060;
@@ -191,19 +202,23 @@ footer p {
 }
 
 .container {
-  height: calc(66vh - 100px);
+  height: 63%;
   display: flex;
   flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .dropdown-container {
-  width: 1024px;
+  max-width: 80%;
   margin: 20px auto;
   border-radius: 8px;
   overflow: hidden;
 }
 .dropdown-container p {
   background-color: transparent;
+  font-size: 0.8em;
+  padding: 0px 20px;
 }
 
 .header {
@@ -211,12 +226,13 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: white;
   cursor: pointer;
 }
 .header h2 {
   background-color: transparent;
+  font-size: 1.3em;
 }
 
 .arrow {
@@ -240,17 +256,18 @@ footer p {
 
 .content.open {
   max-height: 300px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .ArticlePage-container {
-  width: 1240px;
-  margin: auto;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  height: calc(81vh - 70px);
+  height: 80%;
 }
 .ArticlePage-container .images_container {
   display: flex;
@@ -261,8 +278,10 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  top: 0px;
+  top: 10px;
   position: relative;
+  border-radius: 25px;
+  box-sizing: border-box;
 }
 .ArticlePage-container .images_container .overlay {
   display: flex;
@@ -271,13 +290,14 @@ footer p {
   height: 100%;
   justify-content: space-between;
   background-color: transparent;
+  padding: 0px 10px;
 }
 .ArticlePage-container .images_container .overlay i {
   background-color: transparent;
   cursor: pointer;
   align-content: center;
   font-size: 60px;
-  padding: 10px;
+  padding: 0px;
   color: white;
 }
 .ArticlePage-container .images_container .overlay p {
@@ -292,6 +312,7 @@ footer p {
   background-color: transparent;
 }
 .ArticlePage-container .sous-photo {
+  padding: 10px 0;
   display: flex;
   top: 20px;
 }
@@ -329,16 +350,16 @@ footer p {
   color: #ff6060;
   padding-right: 20px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1em;
   align-items: center;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche h2 {
   color: #ff6060;
-  font-size: 36px;
+  font-size: 1.5em;
   font-weight: 500;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche p {
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 500;
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche .tag {
@@ -353,7 +374,7 @@ footer p {
   padding: 0px 30px;
   align-content: center;
   margin-right: 20px;
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 700;
 }
 .ArticlePage-container .sous-photo .groupe-description {
@@ -404,12 +425,12 @@ footer p {
 .ArticlePage-container .sous-photo .groupe-description .DropDown_container .DropDown_desc ul {
   list-style: none;
   background-color: transparent;
-  padding: 20px;
+  padding: 10px 0px 0px 20px;
 }
 .ArticlePage-container .sous-photo .groupe-description .DropDown_container .DropDown_desc ul li {
   background-color: transparent;
   font-weight: 300;
-  padding: 3px 0;
+  padding: 2px 0;
   font-size: 14px;
 }
 
@@ -417,7 +438,7 @@ footer p {
   display: flex;
 }
 .star i {
-  font-size: 36px;
+  font-size: 1.7em;
   padding-left: 10px;
 }
 
@@ -506,10 +527,23 @@ footer p {
 }
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
 /*# sourceMappingURL=App.css.map */

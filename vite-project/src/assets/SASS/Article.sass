@@ -3,10 +3,12 @@
   width: 100%
   display: flex
   justify-content: center
-  width: 1240px
+  max-width: 1240px
+  width: 90%
   margin: auto
   border-radius: 25px
   overflow: hidden
+  height: 63%
   &::after
     content: ""
     position: absolute
@@ -20,14 +22,13 @@
     width: 1240px
     margin: auto
     display: grid
-    height: calc(68vh - 190px)
-    grid-auto-rows: 280px
-    grid-template-columns: 280px 280px 280px
+    height: 100%
+    grid-template-columns: repeat(3, minmax(30%, 320px))
     gap: 50px
     background-color: #f6f6f6
     border-radius: 25px
     justify-content: center
-    padding: 30px 0px
+    padding: 30px 20px
     overflow: scroll
     position: relative
     .link-article
@@ -37,6 +38,7 @@
         overflow: clip
         position: relative
         height: 100%
+        aspect-ratio: 1/1
         &::after
           content: ""
           position: absolute
@@ -53,7 +55,7 @@
           position: relative
         p
           position: absolute
-          font-size: 18px
+          font-size: 0.8em
           font-weight: 700
           z-index: 2
           color: white
@@ -62,7 +64,7 @@
           bottom: 0px
           left: 0px
           justify-items: center
-          padding: 0px 10px 30px 10px
+          padding: 0px 10px 40px 10px
           overflow-wrap: anywhere
           background-color: transparent
 

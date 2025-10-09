@@ -1,11 +1,12 @@
 .ArticlePage-container
-  width: 1240px
-  margin: auto
+  max-width: 1240px
+  width: 100%
+  margin: 0 auto
   display: flex
   flex-direction: column
   justify-content: flex-start
   text-align: center
-  height: calc(81vh - 70px)
+  height: 80%
   .images_container
     display: flex
     height: 50%
@@ -14,8 +15,10 @@
       width: 100%
       height: 100%
       object-fit: cover
-      top: 0px
+      top: 10px
       position: relative
+      border-radius: 25px
+      box-sizing: border-box
     .overlay
       display: flex
       position: absolute
@@ -23,12 +26,13 @@
       height: 100%
       justify-content: space-between
       background-color: transparent
+      padding: 0px 10px
       i
         background-color: transparent
         cursor: pointer
         align-content: center
         font-size: 60px
-        padding: 10px
+        padding: 0px
         color: white
       p
         font-size: 16px
@@ -41,6 +45,7 @@
         color: white
         background-color: transparent
   .sous-photo
+    padding: 10px 0
     display: flex
     top: 20px
     .sous-photo-gauche
@@ -73,14 +78,14 @@
             color: #ff6060
             padding-right: 20px
             font-weight: 500
-            font-size: 18px
+            font-size: 1em
             align-items: center
       h2
         color: #ff6060
-        font-size: 36px
+        font-size: 1.5em
         font-weight: 500
       p
-        font-size: 18px
+        font-size: 1em
         font-weight: 500
       .tag
         display: flex
@@ -93,7 +98,7 @@
           padding: 0px 30px
           align-content: center
           margin-right: 20px
-          font-size: 14px
+          font-size: 0.8em
           font-weight: 700
     .groupe-description
       display: flex
@@ -136,17 +141,17 @@
           ul
             list-style: none
             background-color: transparent
-            padding: 20px
+            padding: 10px 0px 0px 20px
             li
               background-color: transparent
               font-weight: 300
-              padding: 3px 0
+              padding: 2px 0
               font-size: 14px
 
 .star
   display: flex
   i
-    font-size: 36px
+    font-size: 1.7em
     padding-left: 10px
 .orange
   color: #ff6060

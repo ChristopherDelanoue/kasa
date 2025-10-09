@@ -2,35 +2,40 @@
   background-color: #ffff
   font-family: 'Montserrat', sans-serif
 
-
-.nav-bar
+nav
+  max-width: 1240px
+  width: 90%
   margin: auto
-  height: 7vh
-  width: 1240px
-  padding: 0px
-  color: #000
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  padding: 20px 0px 30px 0px
-  img
-    height: 68px
-    justify-content: center
-  ul
-    align-items: center
-    list-style: none
+  height: 10%
+  position: relative
+  .nav-bar
+    margin: auto
+    height: 100%
+    width: 100%
+    color: #000
     display: flex
     flex-direction: row
-    justify-content: center
-    font-weight: 500
-    font-size: 24px
-    li
-      cursor: pointer
-      padding: 0px 40px
-      a
-        text-decoration: none
-  @media(max-width: 800px)
-    font-family: sans-serif
-    color: orange
+    justify-content: space-between
+    padding: 10px 0px 10px 0px
+    box-sizing: border-box
+    img
+      height: 68px
+      justify-content: center
+    ul
+      align-items: center
+      list-style: none
+      display: flex
+      flex-direction: row
+      justify-content: center
+      font-weight: 500
+      font-size: 24px
+      li
+        cursor: pointer
+        padding: 0px 0px 0px 40px
+        a
+          text-decoration: none
+    @media(max-width: 800px)
+      font-family: sans-serif
+      color: orange
 
 
