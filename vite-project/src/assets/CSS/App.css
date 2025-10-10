@@ -373,7 +373,7 @@ footer p {
 
 .ArticlePage-container {
   max-width: 1240px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -401,7 +401,7 @@ footer p {
 }
 @media (max-width: 399px) {
   .ArticlePage-container .images_container {
-    height: 28%;
+    height: 200px;
   }
 }
 .ArticlePage-container .images_container img {
@@ -491,6 +491,12 @@ footer p {
 .ArticlePage-container .sous-photo .sous-photo-gauche .desc_container .host_rating .host {
   display: flex;
   flex-direction: row;
+  margin: 10px 0px 10px 0px;
+}
+@media (max-width: 750px) {
+  .ArticlePage-container .sous-photo .sous-photo-gauche .desc_container .host_rating .host {
+    margin: 0;
+  }
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche .desc_container .host_rating .host img {
   height: 64px;
@@ -506,14 +512,12 @@ footer p {
   }
 }
 .ArticlePage-container .sous-photo .sous-photo-gauche .desc_container .host_rating .host p {
-  display: flex;
-  text-align: right;
-  width: 50px;
+  width: 70px;
   color: #ff6060;
-  padding-right: 20px;
   font-weight: 500;
   font-size: 1em;
-  align-items: center;
+  align-content: center;
+  text-align: right;
 }
 @media (max-width: 750px) {
   .ArticlePage-container .sous-photo .sous-photo-gauche .desc_container .host_rating .host p {
@@ -535,7 +539,6 @@ footer p {
 .ArticlePage-container .sous-photo .sous-photo-gauche p {
   font-size: 1em;
   font-weight: 500;
-  padding-bottom: 10px;
 }
 @media (max-width: 750px) {
   .ArticlePage-container .sous-photo .sous-photo-gauche p {
@@ -546,9 +549,12 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  padding-bottom: 10px;
+  font-size: 1.3em;
 }
 @media (max-width: 750px) {
   .ArticlePage-container .sous-photo .sous-photo-gauche .tag {
+    padding-top: 10px;
     width: 90%;
     gap: 10px;
     justify-content: flex-start;
@@ -651,6 +657,12 @@ footer p {
 
 .star {
   display: flex;
+  padding: 10px 0;
+}
+@media (max-width: 750px) {
+  .star {
+    padding: P;
+  }
 }
 .star i {
   font-size: 1.7em;
