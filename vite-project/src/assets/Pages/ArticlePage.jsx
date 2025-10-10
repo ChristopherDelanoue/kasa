@@ -7,10 +7,12 @@ import Etoiles from '../../Components/Etoiles.jsx';
 import Tag from '../../Components/Tag.jsx';
 import Host from '../../Components/Host.jsx';
 import Location from '../../Components/Location.jsx';
+import NotFound from '../../Components/NotFound.jsx';
 
 function ArticlePage() {
    const { id } = useParams();
-   const [logement, setLogement] = useState();
+   const [logement, setLogement] = useState(null);
+   const [loading, setLoading] = useState(true);
    const [isOpen, setIsOpen] = useState(false);
    const [index, setIndex] = useState(0);
 
@@ -19,11 +21,14 @@ function ArticlePage() {
          .then((data) => data.json())
          .then((res) => {
             const find = res.find((a) => a.id === id);
-            setLogement(find);
+            setLogement(find || null);
+         })
+         .finally(() => {
+            setLoading(false);
          });
    }, [id]);
 
-   if (!logement) {
+   if (loading) {
       return <Loader />;
    }
    if (logement) {
@@ -63,7 +68,7 @@ function ArticlePage() {
          </div>
       );
    } else {
-      return <Loader />;
+      return <NotFound />;
    }
 
    function changePicture(direction) {
