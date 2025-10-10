@@ -2,6 +2,11 @@ import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import { Loader } from '../../Components/Loader.jsx';
 import DropDownArticle from '../../Components/DropDownArticle.jsx';
+import ImageArticlePage from '../../Components/ImageArticlePage.jsx';
+import Etoiles from '../../Components/Etoiles.jsx';
+import Tag from '../../Components/Tag.jsx';
+import Host from '../../Components/Host.jsx';
+import Location from '../../Components/Location.jsx';
 
 function ArticlePage() {
    const { id } = useParams();
@@ -24,45 +29,22 @@ function ArticlePage() {
    if (logement) {
       return (
          <div className="ArticlePage-container">
-            {console.log(logement)}
-            <div className="images_container">
-               <img
-                  src={logement.pictures[index]}
-                  alt="cover {index}"
-               />
-               <div className="overlay">
-                  <i
-                     onClick={() => changePiture('moins')}
-                     className="fa-solid fa-chevron-left"
-                  ></i>
-                  <i
-                     onClick={() => changePiture('plus')}
-                     className="fa-solid fa-chevron-right"
-                  ></i>
-                  <p>
-                     {index + 1}/{logement.pictures.length}
-                  </p>
-               </div>
-            </div>
+            <ImageArticlePage
+               index={index}
+               pictures={logement.pictures}
+               changePicture={changePicture}
+            />
             <div className="sous-photo">
                <div className="sous-photo-gauche">
-                  <div className="groupe">
-                     <div className="gauche">
-                        <h2>{logement.title}</h2>
-                        <p>{logement.location}</p>
+                  <div className="desc_container">
+                     <div className="location_tag">
+                        <Location appartement={logement} />
+                        <Tag tags={logement.tags} />
                      </div>
-                     <div className="droite">
-                        <p>{logement.host.name}</p>
-                        <img src={logement.host.picture} />
+                     <div className="host_rating">
+                        <Etoiles rating={logement.rating} />
+                        <Host appartement={logement} />
                      </div>
-                  </div>
-                  <div className="groupe">
-                     <div className="tag">
-                        {logement.tags.map((tag, index) => (
-                           <p key={index}>{tag}</p>
-                        ))}
-                     </div>
-                     {etoiles(logement.rating)}
                   </div>
                   <div className="groupe-description">
                      <DropDownArticle title="Description">
@@ -77,7 +59,6 @@ function ArticlePage() {
                      </DropDownArticle>
                   </div>
                </div>
-               <div className="sous-photo-droite"></div>
             </div>
          </div>
       );
@@ -85,21 +66,7 @@ function ArticlePage() {
       return <Loader />;
    }
 
-   function etoiles(rating) {
-      const note = parseInt(rating);
-      const star = [];
-      for (let i = 0; i < 5; i++) {
-         star.push(
-            <i
-               key={i}
-               className={`fa-solid fa-star ${i < note ? 'orange' : 'grey'}`}
-            ></i>,
-         );
-      }
-      return <div className="star">{star}</div>;
-   }
-
-   function changePiture(direction) {
+   function changePicture(direction) {
       setIndex((prevIndex) => {
          if (direction === 'moins') {
             return prevIndex === 0
