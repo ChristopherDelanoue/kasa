@@ -12,7 +12,7 @@ nav {
 }
 @media (max-width: 750px) {
   nav {
-    height: auto;
+    height: 10%;
     width: 90%;
   }
 }
@@ -63,6 +63,10 @@ nav .nav-bar ul li {
 }
 nav .nav-bar ul li a {
   text-decoration: none;
+}
+nav .nav-bar ul li a.active-link {
+  text-decoration: underline;
+  color: black;
 }
 
 footer {
