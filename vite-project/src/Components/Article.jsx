@@ -8,7 +8,6 @@ function Article() {
       fetch('/Data/data.json')
          .then((res) => res.json())
          .then((data) => {
-            console.log('Data JSON :', data);
             setArticles(data);
          })
          .catch((err) => console.error('Erreur de chargement JSON :', err));
