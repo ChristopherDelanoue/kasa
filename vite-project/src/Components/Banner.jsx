@@ -11,6 +11,3 @@ function Banner({ image, alt, text }) {
 }
 
 export default Banner;
-
-// a propos : ../../src/assets/Logo/Image-a-propos.png
-// banner titre : "../../src/assets/Logo/Image-bg.png"
