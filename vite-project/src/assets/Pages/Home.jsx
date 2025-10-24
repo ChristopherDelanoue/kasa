@@ -4,7 +4,11 @@ import Article from '../../Components/Article.jsx';
 function Home() {
    return (
       <>
-         <Banner />
+         <Banner
+            image="../../src/assets/Logo/Image-bg.png"
+            alt="banniere"
+            text="Chez vous, partout et ailleurs"
+         />
          <Article />
       </>
    );

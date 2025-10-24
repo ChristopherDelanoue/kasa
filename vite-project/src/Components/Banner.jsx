@@ -1,13 +1,16 @@
-function Banner() {
+function Banner({ image, alt, text }) {
    return (
       <div className="banner">
          <img
-            src="../../src/assets/Logo/Image-bg.png"
-            alt="banniere"
+            src={image}
+            alt={alt}
          />
-         <p>Chez vous, partout et ailleurs</p>
+         <p>{text}</p>
       </div>
    );
 }
 
 export default Banner;
+
+// a propos : ../../src/assets/Logo/Image-a-propos.png
+// banner titre : "../../src/assets/Logo/Image-bg.png"
